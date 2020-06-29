@@ -3,7 +3,7 @@
   var nx = global.nx || require('@feizheng/next-js-core2');
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.'
 
-  nx.parseRequestArgs = function (inArguments) {
+  nx.parseRequestArgs = function (inArguments, inIsArray) {
     var args = nx.slice(inArguments);
     var length = args.length;
     var options = null;
@@ -26,7 +26,12 @@
         nx.error(MSG_ERROR)
     }
 
-    return options;
+    return !inIsArray ? options : [
+      options.url,
+      options.method,
+      options.data,
+      options.options
+    ];
   };
 
   if (typeof module !== 'undefined' && module.exports) {

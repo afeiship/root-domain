@@ -67,6 +67,30 @@ describe('api.basic test', () => {
     expect(nx.parseRequestArgs(args)).toEqual(expected);
   });
 
+  test('nx.parseRequestArgs 1 args & return array', () => {
+    var args = [
+      {
+        url: '/github/api/v1/afeiship',
+        method: 'get',
+        data: { query: 1 },
+        options: {
+          Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
+        }
+      }
+    ];
+
+    expect(
+      nx.parseRequestArgs(args, true)
+    ).toEqual([
+      '/github/api/v1/afeiship',
+      'get',
+      { query: 1 },
+      {
+        Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
+      }
+    ]);
+  });
+
 
   test('nx.parseRequestArgs 0 args should throw error', () => {
     var args = [];
