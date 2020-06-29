@@ -8,6 +8,12 @@
     var length = args.length;
     var options = null;
 
+    // input:
+    // 1. (config)
+    // 2. (url, config)
+    // 3. (method, url, config)
+    // 4. (method, url, data, config)
+
     switch (length) {
       case 1:
         options = args[0];
@@ -16,10 +22,10 @@
         options = nx.mix({ url: args[0] }, args[1]);
         break;
       case 3:
-        options = nx.mix({ url: args[0], method: args[1] }, args[2]);
+        options = nx.mix({ method: args[0], url: args[1] }, args[2]);
         break;
       case 4:
-        options = { url: args[0], method: args[1], data: args[2], options: args[3] };
+        options = { method: args[0], url: args[1], data: args[2], options: args[3] };
         break;
       default:
         options = null;
@@ -27,8 +33,8 @@
     }
 
     return !inIsArray ? options : [
-      options.url,
       options.method,
+      options.url,
       options.data,
       options.options
     ];

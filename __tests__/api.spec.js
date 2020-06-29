@@ -42,8 +42,8 @@ describe('api.basic test', () => {
 
   test('nx.parseRequestArgs 3 args', () => {
     var args = [
-      '/github/api/v1/afeiship',
       'get',
+      '/github/api/v1/afeiship',
       {
         data: { query: 1 },
         options: {
@@ -57,8 +57,8 @@ describe('api.basic test', () => {
 
   test('nx.parseRequestArgs 4 args', () => {
     var args = [
-      '/github/api/v1/afeiship',
       'get',
+      '/github/api/v1/afeiship',
       { query: 1 },
       {
         Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
@@ -82,8 +82,8 @@ describe('api.basic test', () => {
     expect(
       nx.parseRequestArgs(args, true)
     ).toEqual([
-      '/github/api/v1/afeiship',
       'get',
+      '/github/api/v1/afeiship',
       { query: 1 },
       {
         Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
