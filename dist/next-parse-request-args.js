@@ -3,7 +3,7 @@
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
  * version: 1.0.7
- * date: 2020-06-29T03:14:08.645Z
+ * date: 2020-06-29T03:14:43.499Z
  * license: MIT
  */
 
@@ -11,7 +11,7 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
   var nxDelete = nx.delete || require('@feizheng/next-delete');
-  var DEL_FILEDS = ['url', 'method', 'data'];
+  var DEL_FILEDS = ['method', 'url', 'data'];
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.'
 
   nx.parseRequestArgs = function (inArguments, inIsArray) {
