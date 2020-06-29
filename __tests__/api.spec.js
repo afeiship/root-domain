@@ -5,9 +5,7 @@ const expected = {
   url: '/github/api/v1/afeiship',
   method: 'get',
   data: { query: 1 },
-  options: {
-    Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
-  }
+  Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
 };
 
 describe('api.basic test', () => {
@@ -16,8 +14,9 @@ describe('api.basic test', () => {
       url: '/github/api/v1/afeiship',
       method: 'get',
       data: { query: 1 },
-      options: {
-        Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
+      Authorization: 'eyJhbGciOiJIUzUxMiJ9',
+      headers: {
+        'Content-Type': 'application/json'
       }
     }];
 
@@ -26,7 +25,7 @@ describe('api.basic test', () => {
 
   test('nx.parseRequestArgs 1 args is string should default', function () {
     var args = ['/github/api/v1/afeiship'];
-    expect(nx.parseRequestArgs(args)).toEqual({ url: '/github/api/v1/afeiship' });
+    expect(nx.parseRequestArgs(args)).toEqual({ method: 'get', url: '/github/api/v1/afeiship' });
   });
 
 
@@ -36,9 +35,8 @@ describe('api.basic test', () => {
       {
         method: 'get',
         data: { query: 1 },
-        options: {
-          Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
-        }
+        Authorization: 'eyJhbGciOiJIUzUxMiJ9',
+        headers: { 'Content-Type': 'application/json' }
       }
     ];
 
@@ -51,9 +49,8 @@ describe('api.basic test', () => {
       '/github/api/v1/afeiship',
       {
         data: { query: 1 },
-        options: {
-          Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
-        }
+        Authorization: 'eyJhbGciOiJIUzUxMiJ9',
+        headers: { 'Content-Type': 'application/json' }
       }
     ];
 
@@ -69,6 +66,7 @@ describe('api.basic test', () => {
         Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
       }
     ];
+
     expect(nx.parseRequestArgs(args)).toEqual(expected);
   });
 
@@ -78,9 +76,7 @@ describe('api.basic test', () => {
         url: '/github/api/v1/afeiship',
         method: 'get',
         data: { query: 1 },
-        options: {
-          Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
-        }
+        Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
       }
     ];
 
