@@ -2,8 +2,8 @@
  * name: @feizheng/next-parse-request-args
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
- * version: 1.0.8
- * date: 2020-06-29T05:02:52.694Z
+ * version: 1.0.9
+ * date: 2020-06-29T05:42:45.934Z
  * license: MIT
  */
 
@@ -29,7 +29,7 @@
 
     switch (length) {
       case 1:
-        options = typeof args[0] === 'string' ? { method: 'get', url: args[0] } : args[0];
+        options = typeof args[0] === 'string' ? { url: args[0] } : args[0];
         break;
       case 2:
         options = nx.mix({ url: args[0] }, args[1]);

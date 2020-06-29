@@ -26,8 +26,8 @@ import '@feizheng/next-parse-request-args';
   url: '/api/v1',
   method:'get',
   data: { query:1, zx:1 },
-  Authorization: 'eyJhbGciOiJIUzUxMiJ9', 
   headers: { 
+    'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
     'Content-Type': 'application/json' 
   }
 }

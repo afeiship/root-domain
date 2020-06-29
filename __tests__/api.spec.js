@@ -5,7 +5,10 @@ const expected = {
   url: '/github/api/v1/afeiship',
   method: 'get',
   data: { query: 1 },
-  Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
+  headers: {
+    'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
+    'Content-Type': 'application/json'
+  }
 };
 
 describe('api.basic test', () => {
@@ -14,8 +17,8 @@ describe('api.basic test', () => {
       url: '/github/api/v1/afeiship',
       method: 'get',
       data: { query: 1 },
-      Authorization: 'eyJhbGciOiJIUzUxMiJ9',
       headers: {
+        'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
         'Content-Type': 'application/json'
       }
     }];
@@ -35,8 +38,10 @@ describe('api.basic test', () => {
       {
         method: 'get',
         data: { query: 1 },
-        Authorization: 'eyJhbGciOiJIUzUxMiJ9',
-        headers: { 'Content-Type': 'application/json' }
+        headers: {
+          'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
+          'Content-Type': 'application/json'
+        }
       }
     ];
 
@@ -49,8 +54,10 @@ describe('api.basic test', () => {
       '/github/api/v1/afeiship',
       {
         data: { query: 1 },
-        Authorization: 'eyJhbGciOiJIUzUxMiJ9',
-        headers: { 'Content-Type': 'application/json' }
+        headers: {
+          'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
+          'Content-Type': 'application/json'
+        }
       }
     ];
 
@@ -63,7 +70,10 @@ describe('api.basic test', () => {
       '/github/api/v1/afeiship',
       { query: 1 },
       {
-        Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
+        headers: {
+          'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
+          'Content-Type': 'application/json'
+        }
       }
     ];
 
@@ -76,7 +86,10 @@ describe('api.basic test', () => {
         url: '/github/api/v1/afeiship',
         method: 'get',
         data: { query: 1 },
-        Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
+        headers: {
+          'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
+          'Content-Type': 'application/json'
+        }
       }
     ];
 
@@ -87,7 +100,10 @@ describe('api.basic test', () => {
       '/github/api/v1/afeiship',
       { query: 1 },
       {
-        Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
+        headers: {
+          'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
+          'Content-Type': 'application/json'
+        }
       }
     ]);
   });
