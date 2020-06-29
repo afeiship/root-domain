@@ -2,8 +2,8 @@
  * name: @feizheng/next-parse-request-args
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
- * version: 1.0.7
- * date: 2020-06-29T03:15:07.981Z
+ * version: 1.0.8
+ * date: 2020-06-29T05:02:52.694Z
  * license: MIT
  */
 
@@ -11,6 +11,7 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
   var nxDelete = nx.delete || require('@feizheng/next-delete');
+  var DEFAULT_OPTIONS = { method: 'get' };
   var DEL_FIELDS = ['method', 'url', 'data'];
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.'
 
@@ -43,6 +44,8 @@
         options = null;
         nx.error(MSG_ERROR)
     }
+
+    options = nx.mix(null, DEFAULT_OPTIONS, options);
 
     return !inIsArray ? options : [
       options.method,

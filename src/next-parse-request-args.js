@@ -2,6 +2,7 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
   var nxDelete = nx.delete || require('@feizheng/next-delete');
+  var DEFAULT_OPTIONS = { method: 'get' };
   var DEL_FIELDS = ['method', 'url', 'data'];
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.'
 
@@ -19,7 +20,7 @@
 
     switch (length) {
       case 1:
-        options = typeof args[0] === 'string' ? { method: 'get', url: args[0] } : args[0];
+        options = typeof args[0] === 'string' ? { url: args[0] } : args[0];
         break;
       case 2:
         options = nx.mix({ url: args[0] }, args[1]);
@@ -34,6 +35,8 @@
         options = null;
         nx.error(MSG_ERROR)
     }
+
+    options = nx.mix(null, DEFAULT_OPTIONS, options);
 
     return !inIsArray ? options : [
       options.method,
