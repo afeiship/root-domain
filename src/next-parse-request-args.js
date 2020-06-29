@@ -2,7 +2,7 @@
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
   var nxDelete = nx.delete || require('@feizheng/next-delete');
-  var DEL_FILEDS = ['method', 'url', 'data'];
+  var DEL_FIELDS = ['method', 'url', 'data'];
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.'
 
   nx.parseRequestArgs = function (inArguments, inIsArray) {
@@ -39,7 +39,7 @@
       options.method,
       options.url,
       options.data,
-      nxDelete(options, DEL_FILEDS)
+      nxDelete(options, DEL_FIELDS)
     ];
   };
 
