@@ -4,7 +4,7 @@
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.'
 
   nx.parseRequestArgs = function (inArguments, inIsArray) {
-    var args = nx.slice(inArguments);
+    var args = inArguments;
     var length = args.length;
     var options = null;
 
