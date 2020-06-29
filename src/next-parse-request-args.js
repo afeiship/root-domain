@@ -10,16 +10,17 @@
 
     // input:
     // 1. (config)
+    // 1. (url)
     // 2. (url, config)
     // 3. (method, url, config)
     // 4. (method, url, data, config)
 
     switch (length) {
       case 1:
-        options = args[0];
+        options = typeof args[0] === 'string' ? { url: args[0] } : args[0];
         break;
       case 2:
-        options = nx.mix({ url: args[0] }, args[1]);
+        options = nx.mix({ method: 'get', url: args[0] }, args[1]);
         break;
       case 3:
         options = nx.mix({ method: args[0], url: args[1] }, args[2]);

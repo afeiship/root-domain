@@ -11,7 +11,7 @@ const expected = {
 };
 
 describe('api.basic test', () => {
-  test('nx.parseRequestArgs 1 args', function () {
+  test('nx.parseRequestArgs 1 args is object', function () {
     var args = [{
       url: '/github/api/v1/afeiship',
       method: 'get',
@@ -22,6 +22,11 @@ describe('api.basic test', () => {
     }];
 
     expect(nx.parseRequestArgs(args)).toEqual(expected);
+  });
+
+  test('nx.parseRequestArgs 1 args is string should default', function () {
+    var args = ['/github/api/v1/afeiship'];
+    expect(nx.parseRequestArgs(args)).toEqual({ url: '/github/api/v1/afeiship' });
   });
 
 
