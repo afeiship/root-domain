@@ -64,7 +64,22 @@ describe('api.basic test', () => {
         Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' }
       }
     ];
-
     expect(nx.parseRequestArgs(args)).toEqual(expected);
-  })
+  });
+
+
+  test('nx.parseRequestArgs 0 args should throw error', () => {
+    var args = [];
+    expect(() => {
+      nx.parseRequestArgs(args)
+    }).toThrow();
+  });
+
+  test('nx.parseRequestArgs 5 args should throw error', () => {
+    var args = [1, 2, 3, 4, 5];
+    expect(() => {
+      nx.parseRequestArgs(args)
+    }).toThrow();
+  });
+
 });

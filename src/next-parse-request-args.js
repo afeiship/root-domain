@@ -1,19 +1,12 @@
 (function () {
   var global = global || this || window || Function('return this')();
   var nx = global.nx || require('@feizheng/next-js-core2');
-  var nxDelete = nx.delete || require('@feizheng/next-delete');
-  var MSG_ERROR = 'The arguments.length at least one.'
-  var DELETE_FIELDS = ['url', 'method', 'data']
+  var MSG_ERROR = 'The arguments.length should between 1 ~ 4.'
 
   nx.parseRequestArgs = function (inArguments) {
     var args = nx.slice(inArguments);
     var length = args.length;
     var options = null;
-
-    // 1. (config)
-    // 2. (url, config)
-    // 3. (url, method, config)
-    // 4. (url, method, data, config)
 
     switch (length) {
       case 1:
@@ -32,6 +25,7 @@
         options = null;
         nx.error(MSG_ERROR)
     }
+
     return options;
   };
 

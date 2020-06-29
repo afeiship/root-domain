@@ -15,7 +15,19 @@ npm install -S @feizheng/next-parse-request-args
 ```js
 import '@feizheng/next-parse-request-args';
 
-//DOCS here!
+// input:
+// 1. (config)
+// 2. (url, config)
+// 3. (url, method, config)
+// 4. (url, method, data, config)
+
+// output:
+{
+  url: '/api/v1',
+  method:'get',
+  data: { query:1, zx:1 },
+  { Authorization: 'eyJhbGciOiJIUzUxMiJ9', headers: { 'Content-Type': 'application/json' } }
+}
 ```
 
 ## license

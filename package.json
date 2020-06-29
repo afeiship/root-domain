@@ -35,7 +35,6 @@
     "yargs": "^15.3.1"
   },
   "dependencies": {
-    "@feizheng/next-delete": "^1.0.2",
     "@feizheng/next-js-core2": "^2.5.0"
   },
   "publishConfig": {
