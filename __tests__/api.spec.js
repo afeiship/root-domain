@@ -39,13 +39,26 @@ describe('api.basic test', () => {
         method: 'get',
         data: { query: 1 },
         headers: {
-          'Authorization': 'eyJhbGciOiJIUzUxMiJ9',
+          Authorization: 'eyJhbGciOiJIUzUxMiJ9',
           'Content-Type': 'application/json'
         }
       }
     ];
 
+     var args2 = [
+       'get',
+       {
+         url: '/github/api/v1/afeiship',
+         data: { query: 1 },
+         headers: {
+           Authorization: 'eyJhbGciOiJIUzUxMiJ9',
+           'Content-Type': 'application/json'
+         }
+       }
+     ];
+
     expect(nx.parseRequestArgs(args)).toEqual(expected);
+    expect(nx.parseRequestArgs(args2)).toEqual(expected);
   });
 
   test('nx.parseRequestArgs 3 args', () => {

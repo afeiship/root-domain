@@ -17,9 +17,11 @@ import '@feizheng/next-parse-request-args';
 
 // input:
 // 1. (config)
-// 2. (url, config)
-// 3. (method, url, config)
-// 4. (method, url, data, config)
+// 2. (url)
+// 3. (url, config)
+// 4. (method, config)
+// 5. (method, url, config)
+// 6. (method, url, data, config)
 
 // output:
 {
