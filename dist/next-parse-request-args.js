@@ -2,8 +2,8 @@
  * name: @feizheng/next-parse-request-args
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
- * version: 1.0.10
- * date: 2020-11-04T02:47:26.547Z
+ * version: 1.0.11
+ * date: 2020-11-05T09:21:01.951Z
  * license: MIT
  */
 
@@ -26,11 +26,11 @@
 
     // input:
     // 1. (config)
-    // 1. (url)
-    // 2. (url, config)
-    // 2. (method, config)
-    // 3. (method, url, config)
-    // 4. (method, url, data, config)
+    // 2. (url)
+    // 3. (url, config)
+    // 4. (method, config)
+    // 5. (method, url, config)
+    // 6. (method, url, data, config)
 
     switch (length) {
       case 1:
