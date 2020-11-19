@@ -1,16 +1,16 @@
 /*!
- * name: @feizheng/next-parse-request-args
+ * name: @jswork/next-parse-request-args
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
- * version: 1.0.11
- * date: 2020-11-05T09:21:01.951Z
+ * version: 1.0.0
+ * date: 2020-11-19 09:20:55
  * license: MIT
  */
 
 (function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
-  var nxDelete = nx.delete || require('@feizheng/next-delete');
+  var nx = global.nx || require('@jswork/next');
+  var nxDelete = nx.delete || require('@jswork/next-delete');
   var DEFAULT_OPTIONS = { method: 'get' };
   var DEL_FIELDS = ['method', 'url', 'data'];
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.';
@@ -63,5 +63,3 @@
     module.exports = nx.parseRequestArgs;
   }
 })();
-
-//# sourceMappingURL=next-parse-request-args.js.map

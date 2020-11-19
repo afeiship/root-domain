@@ -1,7 +1,7 @@
 (function () {
   var global = global || this || window || Function('return this')();
-  var nx = global.nx || require('@feizheng/next-js-core2');
-  var nxDelete = nx.delete || require('@feizheng/next-delete');
+  var nx = global.nx || require('@jswork/next');
+  var nxDelete = nx.delete || require('@jswork/next-delete');
   var DEFAULT_OPTIONS = { method: 'get' };
   var DEL_FIELDS = ['method', 'url', 'data'];
   var MSG_ERROR = 'The arguments.length should between 1 ~ 4.';
