@@ -39,5 +39,15 @@
   },
   "dependencies": {
     "@jswork/next-delete": "^1.0.0"
-  }
+  },
+  "keywords": [
+    "next",
+    "parse",
+    "request",
+    "http",
+    "ajax",
+    "arguments",
+    "args",
+    "fetch"
+  ]
 }

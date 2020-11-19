@@ -3,7 +3,7 @@
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
  * version: 1.0.0
- * date: 2020-11-19 09:20:55
+ * date: 2020-11-19 09:21:33
  * license: MIT
  */
 
