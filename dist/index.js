@@ -2,8 +2,8 @@
  * name: @jswork/next-parse-request-args
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
- * version: 1.0.1
- * date: 2020-11-20 23:44:33
+ * version: 1.0.2
+ * date: 2020-11-20 23:47:09
  * license: MIT
  */
 
