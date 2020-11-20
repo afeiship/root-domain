@@ -13,15 +13,16 @@ npm install -S @jswork/next-parse-request-args
 
 ## usage
 ```js
-import '@feizheng/next-parse-request-args';
+import '@jswork/next-parse-request-args';
 
 // input:
 // 1. (config)
 // 2. (url)
 // 3. (url, config)
 // 4. (method, config)
-// 5. (method, url, config)
-// 6. (method, url, data, config)
+// 5. (method, url)
+// 6. (method, url, config)
+// 7. (method, url, data, config)
 
 // output:
 {

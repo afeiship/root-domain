@@ -58,8 +58,14 @@
         }
       ];
 
+      var args3 = [
+        'get',
+        '/github/api/v1/afeiship'
+      ];
+
       expect(nx.parseRequestArgs(args)).toEqual(expected);
       expect(nx.parseRequestArgs(args2)).toEqual(expected);
+      expect(nx.parseRequestArgs(args3)).toEqual({ method: 'get', url: '/github/api/v1/afeiship' });
     });
 
     test('nx.parseRequestArgs 3 args', () => {

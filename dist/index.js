@@ -2,8 +2,8 @@
  * name: @jswork/next-parse-request-args
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
- * version: 1.0.0
- * date: 2020-11-19 09:21:33
+ * version: 1.0.1
+ * date: 2020-11-20 23:44:33
  * license: MIT
  */
 
@@ -29,17 +29,20 @@
     // 2. (url)
     // 3. (url, config)
     // 4. (method, config)
-    // 5. (method, url, config)
-    // 6. (method, url, data, config)
+    // 5. (method, url)
+    // 6. (method, url, config)
+    // 7. (method, url, data, config)
 
     switch (length) {
       case 1:
         options = typeof args[0] === 'string' ? { url: args[0] } : args[0];
         break;
       case 2:
+        var config = typeof args[1] === 'string' ? { url: args[1] } : args[1];
         options = isValidMethod(args[0])
-          ? nx.mix({ method: args[0] }, args[1])
+          ? nx.mix({ method: args[0] }, config)
           : nx.mix({ url: args[0] }, args[1]);
+
         break;
       case 3:
         options = nx.mix({ method: args[0], url: args[1] }, args[2]);
