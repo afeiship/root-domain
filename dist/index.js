@@ -2,13 +2,13 @@
  * name: @jswork/next-parse-request-args
  * description: Request arguments parser.
  * homepage: https://github.com/afeiship/next-parse-request-args
- * version: 1.0.2
- * date: 2020-11-20 23:47:09
+ * version: 1.0.3
+ * date: 2021-01-06 22:31:08
  * license: MIT
  */
 
 (function () {
-  var global = global || this || window || Function('return this')();
+  var global = global || window || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var nxDelete = nx.delete || require('@jswork/next-delete');
   var DEFAULT_OPTIONS = { method: 'get' };
