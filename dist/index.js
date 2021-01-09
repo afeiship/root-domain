@@ -8,7 +8,7 @@
  */
 
 (function () {
-  var global = global || window || Function('return this')();
+  var global = typeof window !== 'undefined' ? window : this || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var nxDelete = nx.delete || require('@jswork/next-delete');
   var DEFAULT_OPTIONS = { method: 'get' };
