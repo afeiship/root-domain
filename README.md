@@ -13,9 +13,11 @@ npm install @jswork/root-domain
 
 ## usage
 ```js
-import rootDomain from '@jswork/root-domain';
+import rd from '@jswork/root-domain';
 
-// usage goes here.
+rd('www.baidu.com');                      // baidu.com
+rd('https://api.js.work:8080/v1/user');   // js.work
+rd('http://localhost');                   // localhost
 ```
 
 ## license
