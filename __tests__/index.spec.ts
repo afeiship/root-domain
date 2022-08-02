@@ -31,8 +31,8 @@ describe('api.basic', () => {
     expect(res).toBe('localhost');
   });
 
-  test('special domain should worked', function () {
-    const str1 = 'http://www.js.work';
+  test('special domain(js.work) should worked', function () {
+    const str1 = 'https://api.js.work:8080/v1/user';
     const res1 = rootDomain(str1);
     expect(res1).toBe('js.work');
   });
