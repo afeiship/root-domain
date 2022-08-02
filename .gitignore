@@ -7,6 +7,7 @@ package-lock.json
 .DS_Store
 .idea
 .vscode
+dist
 
-# vscode localhistory
-.history
+.tmp
+docs
