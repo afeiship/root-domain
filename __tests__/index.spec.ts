@@ -36,4 +36,10 @@ describe('api.basic', () => {
     const res1 = rootDomain(str1);
     expect(res1).toBe('js.work');
   });
+
+  test('special for bio work', ()=>{
+    const url = 'https://cloud.metagene.alkaidos.cn/main/knowledge-base';
+    const res = rootDomain(url);
+    expect(res).toBe('alkaidos.cn');
+  })
 });
